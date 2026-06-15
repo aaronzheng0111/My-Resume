@@ -2,6 +2,7 @@ import { projects } from '../data/profile'
 
 function ProjectCard({ project }) {
   const hasLink = Boolean(project.href)
+  const imageSrc = project.image ? import.meta.env.BASE_URL + project.image : null
 
   const inner = (
     <div className="flex items-start gap-4">
@@ -20,6 +21,16 @@ function ProjectCard({ project }) {
         <p className="mt-1.5 text-sm leading-relaxed text-dim">
           {project.description}
         </p>
+        {imageSrc && (
+          <div className="mt-4 overflow-hidden rounded-lg border border-line/60">
+            <img
+              src={imageSrc}
+              alt={project.name}
+              className="w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        )}
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span

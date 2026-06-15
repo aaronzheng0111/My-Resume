@@ -43,5 +43,13 @@ export const projects = [
     description: 'Led the end-to-end development of a stylized, persona-driven enterprise chatbot tailored for massive unstructured datasets. Integrated prompt engineering, RLHF, and safety guardrails to align outputs with brand voice, achieving a 90% accuracy rate while minimizing hallucinations. Owned the full model lifecycle and DevOps pipeline, optimizing VRAM and inference latency to ensure stable, high-throughput performance under high concurrency.',
     tags: ['LLM', 'GenAI', 'RLHF','NLU','PromptEngineering','LLMOps','VRAMOptimization'],
     href: '',
+  },
+  {
+    id: '03',
+    name: 'Data Processing Pipeline',
+    description: 'Process audio pipeline to get a clean audio dataset for TTS training.',
+    tags: ['Python', 'Audio', 'TTS', 'Data Pipeline','Whisper','VLLM','VAD'],
+    href: '',
+    image: 'Data Pipeline Example.png',
   }
 ]
