@@ -39,9 +39,9 @@ export const projects = [
   },
   {
     id: '02',
-    name: 'IN PROGRESS',
-    description: 'IN PROGRESS',
-    tags: ['Python', 'React.js', 'FastAPI'],
+    name: 'Enterprise Customized LLM Chatbot',
+    description: 'Led the end-to-end development of a stylized, persona-driven enterprise chatbot tailored for massive unstructured datasets. Integrated prompt engineering, RLHF, and safety guardrails to align outputs with brand voice, achieving a 90% accuracy rate while minimizing hallucinations. Owned the full model lifecycle and DevOps pipeline, optimizing VRAM and inference latency to ensure stable, high-throughput performance under high concurrency.',
+    tags: ['LLM', 'GenAI', 'RLHF','NLU','PromptEngineering','LLMOps','VRAMOptimization'],
     href: '',
   }
 ]
