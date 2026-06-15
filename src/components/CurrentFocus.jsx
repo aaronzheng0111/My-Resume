@@ -2,12 +2,14 @@ import { currentFocus } from '../data/profile'
 
 export default function CurrentFocus() {
   return (
-    <section id="focus" className="px-6 py-24 sm:px-8 sm:py-32">
+    <section id="focus" className="section-layer-2 px-6 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto w-full max-w-3xl">
-        <div className="overflow-hidden rounded-xl border border-line bg-surface/70 shadow-sm shadow-black/20">
+        <div className="glass-warm relative overflow-hidden rounded-xl shadow-sm shadow-black/25">
+          {/* Glass inner rim highlight */}
+          <div className="pointer-events-none absolute inset-0 rounded-xl border border-white/[0.03]" aria-hidden="true" />
           {/* terminal title bar */}
-          <div className="flex items-center gap-2 border-b border-line-soft px-4 py-3">
-            <span className="h-2.5 w-2.5 rounded-full bg-line" />
+          <div className="flex items-center gap-2 border-b border-orange/10 px-4 py-3">
+            <span className="h-2.5 w-2.5 rounded-full bg-orange/70" />
             <span className="h-2.5 w-2.5 rounded-full bg-line" />
             <span className="h-2.5 w-2.5 rounded-full bg-line" />
             <span className="ml-3 font-mono text-xs tracking-wide text-muted">

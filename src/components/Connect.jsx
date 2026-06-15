@@ -23,7 +23,7 @@ const channels = [
 
 export default function Connect() {
   return (
-    <section id="connect" className="px-6 py-24 sm:px-8 sm:py-32">
+    <section id="connect" className="section-layer-4 px-6 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto w-full max-w-3xl">
         <h2 className="font-mono text-xs tracking-[0.3em] text-muted uppercase">
           Let&apos;s Connect
@@ -36,7 +36,7 @@ export default function Connect() {
               href={c.href}
               target={c.external ? '_blank' : undefined}
               rel={c.external ? 'noopener noreferrer' : undefined}
-              className="group flex items-center justify-between py-5 transition-colors"
+              className="group flex items-center justify-between rounded-lg px-2 py-5 -mx-2 transition-colors hover:bg-orange/[0.05] hover:backdrop-blur-[4px]"
             >
               <span className="font-display text-xl font-medium text-text transition-transform duration-200 group-hover:translate-x-1 sm:text-2xl">
                 {c.label}

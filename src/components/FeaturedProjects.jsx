@@ -36,7 +36,7 @@ function ProjectCard({ project }) {
 
   if (!hasLink) {
     return (
-      <div className="block rounded-xl border border-line-soft bg-elevated/20 p-5 sm:p-6">
+      <div className="relative block rounded-xl border border-glass-border-soft bg-elevated/15 p-5 backdrop-blur-[8px] sm:p-6">
         {inner}
       </div>
     )
@@ -47,7 +47,7 @@ function ProjectCard({ project }) {
       href={project.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block rounded-xl border border-line bg-elevated/30 p-5 transition-transform duration-200 hover:-translate-y-0.5 hover:border-orange/50 sm:p-6"
+      className="group relative block rounded-xl border border-orange/20 bg-orange/[0.03] p-5 shadow-sm shadow-black/20 backdrop-blur-[12px] transition duration-200 hover:-translate-y-1 hover:border-orange/50 hover:bg-orange/[0.06] hover:shadow-md hover:shadow-orange/[0.05] sm:p-6"
     >
       {inner}
     </a>
@@ -56,7 +56,7 @@ function ProjectCard({ project }) {
 
 export default function FeaturedProjects() {
   return (
-    <section id="projects" className="px-6 py-24 sm:px-8 sm:py-32">
+    <section id="projects" className="section-layer-3 px-6 py-24 sm:px-8 sm:py-32">
       <div className="mx-auto w-full max-w-3xl">
         <div className="mb-10 flex items-baseline justify-between">
           <h2 className="font-display text-2xl font-semibold tracking-tight text-text sm:text-3xl">

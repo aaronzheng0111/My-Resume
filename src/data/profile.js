@@ -7,7 +7,7 @@ export const profile = {
   name: 'Bolin Zheng (Aaron)',
   role: 'AI / Data Engineer',
   tagline: 'Agentic AI • Prompt Engineering • Full-Stack Development • Cloud Infrastructure',
-  intro: 'Building AI data systems and turning ideas into production.',
+  intro: 'Building AI data systems and turning ideas into production ：）',
 
   // Links — replace with your real URLs.
   links: {

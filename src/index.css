@@ -7,11 +7,11 @@
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   /* Quiet, technical dark palette */
-  --color-ink: #07070a;
-  --color-surface: #0d0d11;
-  --color-elevated: #131317;
-  --color-line: #232329;
-  --color-line-soft: #1a1a1f;
+  --color-ink: #0f0f16;
+  --color-surface: #181820;
+  --color-elevated: #202028;
+  --color-line: #2e2e38;
+  --color-line-soft: #24242d;
   --color-muted: #6b6b76;
   --color-dim: #9a9aa6;
   --color-text: #ededf0;
@@ -20,6 +20,16 @@
   /* Claude-style warm coral accent — used sparingly */
   --color-orange: #d97757;
   --color-orange-soft: #e0967c;
+
+  /* Glass surface tokens */
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-border-soft: rgba(255, 255, 255, 0.04);
+  --color-glass-inner: rgba(255, 255, 255, 0.03);
+
+  /* Diffuse glow presets */
+  --color-glow-warm: rgba(217, 119, 87, 0.10);
+  --color-glow-cool: rgba(214, 214, 220, 0.04);
+  --color-glow-warm-soft: rgba(224, 150, 124, 0.07);
 }
 
 /* ─── Base ──────────────────────────────────────────────────── */
@@ -99,4 +109,72 @@ body {
   /* fade the grid toward the edges so it stays quiet */
   mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 35%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 35%, transparent 100%);
+}
+
+/* ─── Breathing ambient glow ───────────────────────────────── */
+@keyframes breathe {
+  0%, 100% { opacity: 0.06; }
+  50%      { opacity: 0.10; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .glow-breathe {
+    animation: breathe 10s ease-in-out infinite;
+  }
+}
+
+/* ─── Glass surfaces ────────────────────────────────────────── */
+.glass {
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  background-color: rgba(32, 32, 40, 0.40);
+}
+.glass-soft {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(24, 24, 32, 0.65);
+}
+.glass::before,
+.glass-soft::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+/* Warm-tinted glass — subtle orange glow */
+.glass-warm {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background-color: rgba(217, 119, 87, 0.05);
+  border: 1px solid rgba(217, 119, 87, 0.06);
+}
+
+/* ─── Diffuse glow layers ───────────────────────────────────── */
+.glow-layer {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 9999px;
+}
+.glow-layer--warm {
+  background: radial-gradient(circle, rgba(217, 119, 87, 0.10) 0%, transparent 70%);
+}
+.glow-layer--cool {
+  background: radial-gradient(circle, rgba(214, 214, 220, 0.04) 0%, transparent 70%);
+}
+
+/* ─── Section depth layering ────────────────────────────────── */
+.section-layer-1 { position: relative; z-index: 1; }
+.section-layer-2 { position: relative; z-index: 2; }
+.section-layer-3 { position: relative; z-index: 3; }
+.section-layer-4 { position: relative; z-index: 4; }
+
+/* ─── Card depth shadows ────────────────────────────────────── */
+.card-shadow {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+.card-shadow-raised {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
