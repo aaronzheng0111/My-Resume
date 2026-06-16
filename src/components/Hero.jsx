@@ -77,12 +77,12 @@ export default function Hero() {
               <span className="cursor-blink ml-0.5 text-orange">_</span>
             </p>
 
-            <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.05] tracking-tight text-text sm:text-6xl md:text-7xl">
+            <h1 className="mt-6 font-sans text-5xl font-semibold leading-[1.05] tracking-tight text-text sm:text-6xl md:text-7xl">
               {profile.name}
             </h1>
 
             <div className="mt-5 flex flex-col gap-1.5">
-              <p className="font-display text-lg font-medium text-accent sm:text-xl">
+              <p className="font-sans text-lg font-medium text-accent sm:text-xl">
                 {profile.role}
               </p>
               <p className="font-mono text-sm tracking-wide text-dim">
