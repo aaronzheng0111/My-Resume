@@ -1,4 +1,5 @@
 import { profile } from '../data/profile'
+import ScrollMarquee from './ScrollMarquee'
 
 // Resolve the resume against the app base URL so it works on GitHub Pages too.
 const resumeHref = import.meta.env.BASE_URL + profile.links.resume
@@ -77,7 +78,7 @@ export default function Hero() {
               <span className="cursor-blink ml-0.5 text-orange">_</span>
             </p>
 
-            <h1 className="mt-6 font-sans text-5xl font-semibold leading-[1.05] tracking-tight text-text sm:text-6xl md:text-7xl">
+            <h1 className="mt-6 font-hero text-5xl font-normal leading-[1.05] tracking-wide text-text sm:text-6xl md:text-7xl lg:text-[5.5rem]">
               {profile.name}
             </h1>
 
@@ -112,6 +113,8 @@ export default function Hero() {
               ))}
             </div>
           </div>
+
+          <ScrollMarquee text={profile.marquee} />
         </div>
       </div>
 

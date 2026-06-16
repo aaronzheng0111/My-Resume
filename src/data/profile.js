@@ -9,6 +9,9 @@ export const profile = {
   tagline: 'Agentic AI • Prompt Engineering • Full-Stack Development • Cloud Infrastructure',
   intro: 'Building AI data systems and turning ideas into production ：）',
 
+  // Looping ticker below hero buttons — change this sentence anytime.
+  marquee: 'Interested in AI, Data, or building things? Let’s have a coffee chat ☕️ ~',
+
   // Links — replace with your real URLs.
   links: {
     // Just the filename. Drop the matching PDF into the /public folder.
